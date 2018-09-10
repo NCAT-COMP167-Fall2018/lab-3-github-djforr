@@ -5,6 +5,9 @@
  */
 package personaltwitterfeed;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -51,5 +54,16 @@ public class PersonalTwitterFeed {
         
         System.out.println("Your twitter feed is full");
     }
-    
+  private static String getCurrentTimeStamp(){
+  String currTime;
+  String pattern = "EEEEE dd MMMMM yyyy HH:mm:ss.SSSZ";
+
+  SimpleDateFormat simpleDateFormat = 
+          new SimpleDateFormat(pattern, new Locale("da", "DK"));
+
+String date = simpleDateFormat.format(new Date());
+return date;
+  }
 }
+  
+
